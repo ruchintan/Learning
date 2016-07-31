@@ -1,0 +1,47 @@
+package duaratus;
+
+public class Thisclass {
+	
+	private int num;
+	private int den;
+	public static long start;
+	
+	public Thisclass(int num, int den) {
+	this.num = num;
+	this.den = den;
+	}
+
+	public Thisclass(int n) {
+	this(n, 1);
+	}
+	
+	public void addOn(Thisclass f) {
+	num = num * f.den + den * f.num;
+	den *= f.den;
+	}
+	
+	public static Thisclass add(Thisclass f1, Thisclass f2) {
+	int n = f1.num * f2.den + f1.den * f2.num;
+	int d = f1.den * f2.den;
+	return new Thisclass(n, d);
+	}
+	
+	//automatically called by system.out.println()
+	@Override
+	public String toString() {
+		return num + "/" + den;
+	}
+	
+	public static void main(String[] args) {
+	start = System.currentTimeMillis();
+	
+	Thisclass f1 = new Thisclass(3, 4);
+	Thisclass f2 = new Thisclass(1, 3);
+	System.out.print(f1 + " + " + f2 + " = ");
+	System.out.println(add(f1, f2));
+	f1.addOn(f2);
+	System.out.println("Using addOn() changes f1 to " + f1);
+	}
+	
+	long elapsed = System.currentTimeMillis()- start;
+}

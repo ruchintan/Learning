@@ -1,0 +1,23 @@
+package duaratus;
+
+public class BinarySearch {
+	static int[] data = {4, 7, 11, 13, 21, 29, 30,31,55};
+	
+	public static void rekursif(int left,int right,int val)
+	{
+		int mid = (left+right)/2;
+		if (data[mid]==val)
+		{
+			System.out.println(mid);
+		}
+		else if (data[mid]<val)
+		{
+			rekursif(mid+1, right,val);
+		}
+		else if (data[mid]>val)
+		{
+			rekursif(left,mid-1,val);
+		}
+	}
+
+}

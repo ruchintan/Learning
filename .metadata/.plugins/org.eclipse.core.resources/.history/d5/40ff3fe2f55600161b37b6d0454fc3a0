@@ -1,0 +1,17 @@
+package duaratus;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class stack {
+	public static stack Test = new stack();
+	public static Queue<String> myQueue = new LinkedList<String>();
+	public static Queue<Integer> myNumbers = new LinkedList<Integer>();
+	
+	public void init(String val)
+	{
+		Test.push(val);
+	}
+	
+	 
+}

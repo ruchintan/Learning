@@ -1,0 +1,18 @@
+package duaratus;
+
+public class enhancedfor {
+	static int[] data = {1,15,147,100};
+	public static void enhanced()
+	{
+		for (int item : data)
+		{
+			System.out.println(item);
+		}
+	}
+	public static void main(String[] args)
+	{
+		enhanced();
+	}
+
+}
+

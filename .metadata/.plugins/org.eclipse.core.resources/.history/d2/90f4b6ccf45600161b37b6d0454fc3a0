@@ -1,0 +1,7 @@
+package duaratus;
+
+public class stack {
+	stack test = new stack();
+	stack<String> s = new stack<String>();
+	 
+}
